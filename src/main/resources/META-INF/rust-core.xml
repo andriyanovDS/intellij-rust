@@ -363,6 +363,11 @@
                          implementationClass="org.rust.ide.inspections.RsDoubleNegInspection"/>
 
         <localInspection language="Rust" groupName="Rust"
+                         displayName="Byte constant"
+                         enabledByDefault="true" level="ERROR"
+                         implementationClass="org.rust.ide.inspections.RsByteLiteralCharactersInspection"/>
+
+        <localInspection language="Rust" groupName="Rust"
                          displayName="Suspicious assignment"
                          enabledByDefault="true" level="WARNING"
                          implementationClass="org.rust.ide.inspections.RsSuspiciousAssignmentInspection"/>

@@ -177,6 +177,9 @@ class RsPsiFactory(
     fun createStructNamedField(text: String): RsNamedFieldDecl =
         createFromText("struct S { $text }") ?: error("Failed to create block fields")
 
+    fun createLiteral(text: String): RsLitExpr =
+        createFromText("fn main { let a = $text }") ?: error("Failed to create literal expression")
+
     data class BlockField(val name: String, val type: Ty, val addPub: Boolean)
 
     data class TupleField(val type: Ty, val addPub: Boolean)
